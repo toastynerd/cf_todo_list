@@ -1,0 +1,7 @@
+<div class="large-10 columns centered">
+  <h2>List Items for <%= @list.name %></h2>
+  <%= @list_items.each do |list_item| %>
+    <h4><%= list_item.name %></h4>
+    <p><%= list_item.description %></p>
+  <% end %>
+</div>

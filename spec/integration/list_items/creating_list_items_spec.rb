@@ -20,7 +20,7 @@ feature "create a list item" do
     fill_in "Name", :with => ""
     fill_in "Description", :with => ""
     click_button "Create List item"
-    page.should have_content("Could not create a new list item.")
+    page.should have_content("Could not create list item.")
     page.should have_content("Name can't be blank")
     page.should have_content("Description can't be blank")
   end

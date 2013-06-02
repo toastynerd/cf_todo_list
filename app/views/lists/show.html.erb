@@ -1,9 +1,17 @@
-<div class="large-10 centered">
+<div class="large-10 columns centered">
   <h2><%= @list.name %></h2>
   <h4><%= @list.when %></h4>
+  <ul id="list_items">
+    <%= @list.list_items.each do |list_item| %>
+    <li>
+      #-<%= list_item.id %>-
+      <%= link_to list_item.name, [@list, list_item] %>
+    </li>
+    <% end %>
+  </ul>
   <%= link_to "Edit List", edit_list_path, :class => "button" %>
   <%= link_to "Delete List", list_path(@list), :method => :delete,
-                            :confirm => "Are you sure?" %>
+                            :confirm => "Are you sure?", :class => "button" %>
   <%= link_to "New List Item", new_list_list_item_path(@list), :class => "button" %>
 
 </div>
