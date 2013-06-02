@@ -25,6 +25,26 @@ class ListItemsController < ApplicationController
     #
   end
 
+  def edit
+    #
+  end
+
+  def update
+    if @list_item.update_attributes(params[:list_item])
+      flash[:notice]="Updated list item."
+      redirect_to @list 
+    else
+      flash[:alert]="Could not update list item."
+      render :action => "edit"
+    end
+  end
+
+  def destroy
+    @list_item.destroy
+    flash[:notice]="List item has been deleted."
+    redirect_to [@list]
+  end
+
 private
   def find_list
     @list = List.find(params[:list_id])
@@ -33,5 +53,5 @@ private
   def find_list_item
     @list_item = ListItem.find(params[:id])
   end
-  
+
 end
