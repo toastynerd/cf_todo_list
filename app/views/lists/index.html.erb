@@ -1,0 +1,7 @@
+<div class="large-10 centered">
+  <h2>To do lists</h2>
+  <% @lists.each do |list| %>
+    <%= link_to list.name, list %></br>
+  <% end %>
+  <%= link_to "New List", new_list_path, :class => "button radius" %>
+</div>

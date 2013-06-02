@@ -1,0 +1,11 @@
+<%= form_for(@list) do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :when %>
+  <%= f.date_select :when %>
+
+  <%= f.submit :class => "button" %>
+<% end %>
