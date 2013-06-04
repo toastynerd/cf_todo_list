@@ -60,6 +60,6 @@ module ToDoList
     config.assets.version = '1.0'
 
     #heroku config
-    config.assets.initialize_on_precompile=flase
+    config.assets.initialize_on_precompile=false
   end
 end
