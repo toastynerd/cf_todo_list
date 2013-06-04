@@ -14,7 +14,7 @@ class ListItemsController < ApplicationController
     @list_item = @list.list_items.build(params[:list_item])
     if @list_item.save
       flash[:notice]="Created a new list item."
-      redirect_to [@list, @list_item]
+      redirect_to @list
     else
       flash[:alert]="Could not create list item."
       render :action => "new"

@@ -2,7 +2,7 @@
   <h2><%= @list.name %></h2>
   <h4><%= @list.when %></h4>
   <ul id="list_items">
-    <%= @list.list_items.each do |list_item| %>
+    <% @list.list_items.each do |list_item| %>
     <li>
       #-<%= list_item.id %>-
       <%= link_to list_item.name, [@list, list_item] %>
