@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'dynamic_form'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,14 +28,6 @@ end
 group :test do
   gem 'capybara', '~> 1.1.4'
   gem 'factory_girl', '2.6.4'
-end
-
-group :test, :development do
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
 end
 
 
